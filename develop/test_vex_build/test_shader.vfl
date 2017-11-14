@@ -1,0 +1,8 @@
+#include "voplib.h"
+
+#define ORANGE set(1.0, 0.443, 0.0)
+
+surface tinted_orange(vector tint = {1, 1, 1})
+{
+    Cf = ORANGE * tint;
+}

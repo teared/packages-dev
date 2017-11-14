@@ -1,0 +1,8 @@
+// Test snippet to build.
+
+#define ORANGE set(1.0, 0.443, 0.0)
+
+
+vector tint = chv("tint");
+
+@Cd = ORANGE * tint;
