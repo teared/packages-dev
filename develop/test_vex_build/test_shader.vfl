@@ -1,8 +1,24 @@
-#include "voplib.h"
+// VEX shader example.
 
-#define ORANGE set(1.0, 0.443, 0.0)
+#ifndef test_shader
+#define test_shader
 
-surface tinted_orange(vector tint = {1, 1, 1})
+#include <math.h>
+#define RED {1,0,0}
+
+surface crazy(string maps[] = {"Mandril.rat", "default.pic"};
+              export float alength = 0)
 {
-    Cf = ORANGE * tint;
+    vector texclr = texture(maps[s+t > 1], s, t);
+    vector av[] = array(RED, vector(nrandom()), t, texclr, RED/2);
+
+    #if 0 // Disabled.
+    if (fit(noise(s*8), 0, 1, .3, .7) > t)
+        av = array(1, RED, 0);
+    #endif
+
+    Cf = spline("linear", s, av);
+    alength = len(av);
 }
+
+#endif // test_shader

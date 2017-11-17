@@ -1,15 +1,14 @@
-#ifndef Test
-#define Test
+#ifndef TestLib
+#define TestLib
+
 
 #include "test_include.h"
 
-#define ROUGH_PI 3
 
-
-float test()
+float[] rough_range()
 {
-    return ROUGH_PI;
+    return array(-ROUGH_PI, ROUGH_PI);
 }
 
 
-#endif // Test
+#endif // TestLib

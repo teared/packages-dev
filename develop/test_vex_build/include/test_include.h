@@ -1,11 +1,8 @@
-#ifndef TestInclude
-#define TestInclude
+#ifndef TestIncludeLib
+#define TestIncludeLib
 
 
-float foo()
-{
-    return 0;
-}
+#define ROUGH_PI 3.0
 
 
-#endif // TestInclude
+#endif // TestIncludeLib

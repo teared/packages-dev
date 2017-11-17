@@ -1,9 +1,9 @@
-// VEX Expression example with @-bindings
+// VEX Expression example with @-bindings and backticks.
 
-// HScript backticks were evaluated and replaced with resulting constants.
+// This is proper snippet, but will fail syntax check, since HScript
+// Expressions make no sense outside Houdini.
 
-
-#define PI 3.1415926535897932384  // Evaluated HScript.
+#define PI `$PI` // Use HScript.
 
 int geoself2()
 {
@@ -16,7 +16,7 @@ if (i@group_main)
     int vtx = vertexindex(0, @primnum, 1);
     int pt = vertexpoint(0, vtx);
     s@point_pairs = "22-44";
-    i@group_pair0 = true;  // Evaluated HScript.
+    i@group_pair`opdigits(oppwd())` = true;
 }
 else
 {
